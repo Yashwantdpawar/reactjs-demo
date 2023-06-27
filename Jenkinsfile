@@ -31,7 +31,9 @@ pipeline {
     stage('Deploy') {
       steps {
         // Deploy the Docker container using a deployment script or orchestration tool (e.g., Docker Compose, Kubernetes)
-        sh 'docker-compose up -d'  // Example: using Docker Compose
+        sh 'chmod u+x deploy.sh'
+        sh 'sh deploy.sh'        
+        // sh 'docker-compose up -d'  // Example: using Docker Compose
         // // or
         // sh 'kubectl apply -f deployment.yaml'  // Example: using Kubernetes
       }

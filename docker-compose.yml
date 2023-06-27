@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: reactapp:latest
+    image: ajaydhanvi17/myreactapp:latest
     tty: true
     ports:
-      - 9000:3000
+      - 80:80
