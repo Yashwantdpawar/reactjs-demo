@@ -12,8 +12,8 @@ pipeline {
     stage('Build') {
       steps {
         // Build the Docker image
-        sh 'sudo chmod u+x build.sh'
-        sh 'sudo sh build.sh'
+        sh 'chmod u+x build.sh'
+        sh 'sh build.sh'
       }
     }
 
