@@ -2,12 +2,12 @@ pipeline {
   agent any
 
   stages {
-    stage('Checkout') {
-      steps {
-        // Checkout the source code from the repository.
-        git 'https://github.com/your-repo.git'
-      }
-    }
+    // stage('Checkout') {
+    //   steps {
+    //     // Checkout the source code from the repository.
+    //     git 'https://github.com/your-repo.git'
+    //   }
+    // }
 
     stage('Build') {
       steps {
