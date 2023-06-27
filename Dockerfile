@@ -1,7 +1,7 @@
 FROM node:14 as dev
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-COPY COPY package.json package-lock.json* ./
+COPY package.json package-lock.json* ./
 RUN npm install
 COPY . /usr/src/app
 RUN npm run build
