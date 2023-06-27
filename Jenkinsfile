@@ -9,13 +9,13 @@ pipeline {
       }
     }
 
-    // stage('Build') {
-    //   steps {
-    //     // Build the Docker image
-    //     sh 'sudo chmod u+x build.sh'
-    //     sh 'sudo sh build.sh'
-    //   }
-    // }
+    stage('Build') {
+      steps {
+        // Build the Docker image
+        sh 'sudo chmod u+x build.sh'
+        sh 'sudo sh build.sh'
+      }
+    }
 
     // stage('Push to Registry') {
     //   steps {
