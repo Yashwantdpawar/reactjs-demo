@@ -12,7 +12,7 @@ pipeline {
     stage('Build') {
       steps {
         // Build the Docker image
-        sh 'pwd'
+        sh 'pwd && ls -lrt'
         sh 'chmod u+x build.sh'
         sh 'sh build.sh'
       }
