@@ -25,6 +25,7 @@ pipeline {
         // some block
           sh "docker login -u ajaydhanvi17 -p ${dockerHubPwd}"
         }
+        sh 'docker tag reactapp:latest ajaydhanvi17/reactapp:latest'
         sh 'docker push ajaydhanvi17/myreactapp:latest'
       }
     }
