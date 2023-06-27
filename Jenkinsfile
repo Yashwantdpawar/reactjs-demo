@@ -21,8 +21,9 @@ pipeline {
     stage('Push to Registry') {
       steps {
         // Push the Docker image to a container registry (e.g., Docker Hub)
-        withCredentials([usernamePassword(credentialsId: 'docker-credentials', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
-          sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
+        withCredentials([string(credentialsId: 'docker-pwd', variable: 'dockerHubPwd')]) {
+        // some block
+          sh "docker login -u ajaydhanvi17 -p ${dockerHubPwd}"
         }
         sh 'docker push ajaydhanvi17/myreactapp:latest'
       }
